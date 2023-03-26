@@ -10,49 +10,345 @@
 
 /* Root */
 
-/* :root {
-  --primary-color: ;
-  --secondary-color: ;
-  --accent-color: ;
-} */
+:root {
+  --primary-color: #282426;
+  --secondary-color: #e3e8eb;
+  --accent-color: #e3e8eb;
+}
+
+body {
+  min-width: 300px;
+}
 
 /* Fonts */
 html {
-  font-family: "Karla", sans-serif;
   font-size: 16px;
 }
 
 h1,
 h2,
 h3 {
-  color: var(--accent-color);
-  font-family: "Montserrat", sans-serif serif;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1.38rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 h1 {
+  margin-top: 0;
   font-size: 3.052rem;
-  line-height: 3.5rem;
-  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 2.441rem;
-  line-height: 2rem;
-  margin-bottom: 1rem;
 }
 
 h3 {
-  font-family: "Karla", sans-serif;
-  font-size: 1.9553rem;
-  line-height: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.953rem;
 }
 
 p {
   color: var(--secondary-color);
   font-family: "Karla", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 1rem 2rem;
+  border: none;
   font-size: 1rem;
-  line-height: 1.75rem;
-  margin-bottom: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+/* UI Animation - Reveal */
+
+.reveal .assignment_container {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s 0.5s all ease;
+}
+
+.reveal.active .assignment_container {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Menu */
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+nav a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+nav a.logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.menu.open #menu-list {
+  height: 800px;
+  padding-top: 30px;
+}
+
+#menu-list {
+  height: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+#menu-list a {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 0 5px 0 5px;
+}
+
+#menu-list a:hover {
+  text-decoration: underline;
+}
+
+.bar {
+  width: 40px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 3px 1px 1px 1px;
+  border: 1px solid var(--primary-color);
+  transition: 0.4s;
+}
+
+/* Menu Animation */
+
+.menu.open .bar-1 {
+  transform: rotate(45deg);
+}
+
+.menu.open .bar-2 {
+  opacity: 0;
+}
+
+.menu.open .bar-3 {
+  transform: rotate(-45deg);
+  margin-top: -16px;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 60vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+header p {
+  color: var(--secondary-color);
+}
+
+header button {
+  margin-bottom: 3rem;
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_graphics {
+  width: 25vw;
+  height: 25vw;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 250px;
+  border: 4px solid var(--accent-color);
+  background-color: var(--primary-color);
+  margin-bottom: 1rem;
+  padding: 3rem;
+}
+
+.header_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+/* Assignments section */
+#assignments {
+  padding: 5rem 3rem;
+  background-color: var(--primary-color);
+}
+
+#assignments .assignment_header {
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+  padding: 0.2rem;
+  margin: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+#assignments .assignment_container {
+  display: flex;
+  min-height: 20vh;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.assignment_text {
+  width: 30vw;
+  min-width: 300px;
+  color: var(--secondary-color);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#assignments article:first-child .assignment_text {
+  width: 50vw;
+  min-width: 300px;
+  text-align: center;
+}
+
+#assignments article:first-child .assignment_graphics {
+  width: 2vw;
+  height: 2vh;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.assignment_graphics {
+  width: 8vw;
+  height: 8vw;
+  min-width: 150px;
+  min-height: 150px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 300px;
+  border: 2px solid var(--accent-color);
+}
+.assignment_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+/* Headline */
+.headline {
+  display: flex;
+  min-height: 70vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--accent-color);
+}
+
+.headline div {
+  width: 60vw;
+}
+
+.headline div h2 {
+  color: var(--primary-color);
+}
+
+.headline p {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: #ddd;
+}
+
+footer h2,
+footer h3 {
+  color: var();
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #ddd;
+}
+
+footer section.left {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.9em;
+  }
+
+  #assignments h2 {
+    font-size: 1.953rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .headline div h2 {
+    font-size: 3.052rem;
+    line-height: 3.5rem;
+  }
 }

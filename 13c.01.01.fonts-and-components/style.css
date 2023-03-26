@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Color Properties */
+:root {
+  --color-darker: rgb(48, 48, 48);
+  --color-dark: rgb(64, 64, 64);
+  --color-light: rgb(194, 194, 194);
+  --color-lighter: rgb(255, 255, 255);
+  /* you could add an accent color for CTAs and anchor tags ;-) */
+}
+
+/* Fonts */
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-darker);
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.052rem;
+  margin-bottom: 0.4rem;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.563rem;
+  margin-bottom: 0.4rem;
+}
+
+h3 {
+  font-family: "Karla", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+p {
+  color: var(--color-dark);
+  font-family: "Karla", sans-serif;
+  margin-bottom: 0.4rem;
+  line-height: 1.75;
+  padding: 0.2rem;
+}
+
+/* UI Elements */
+button {
+  font-family: "Karla", sans-serif;
+  display: inline-block;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+}
+
+.light_button {
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 2rem;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-darker);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-dark);
+}
+
+.header_text {
+  width: 40vw;
+  min-width: 300px;
+}
+
+.header_text h1 {
+  color: var(--color-lighter);
+}
+
+.header_text p {
+  color: var(--color-light);
+}
+
+.header_graphics {
+  width: 35vw;
+  height: 35vw;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: var(--color-darker);
+}
+
+/* Sections */
+#intro {
+  display: flex;
+  min-height: 80vh;
+  padding: 0px 15rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-light);
+}
+
+.intro_text {
+  width: 40vw;
+  min-width: 450px;
+}
+
+.intro_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: var(--color-dark);
+}
+
+#cards {
+  min-height: 80vh;
+  padding: 2rem 5rem 0 5rem;
+}
+
+#card_container {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 4rem;
+  align-content: space-between;
+  justify-items: center;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 2rem 50px 2rem 50px;
+  background-color: var(--color-light);
+  text-align: center;
+  margin: 0px 0px 20px;
+}
+
+.card:hover {
+  background-color: var(--color-light);
+  transition: 0.1s;
+  transform: scale(0.99);
+}
+
+.card img {
+  max-width: 300px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: inherit;
+  margin: 0px 0 10px 0;
+  box-shadow: 3px 7px 7px #8888;
+  border: solid 1px var(--color-darker);
+}
+
+.card_name {
+  margin: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.card_slogan,
+.card_title {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.card_mail {
+  padding-bottom: 0.2rem;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.card-footer > input {
+  background-color: var(--color-lighter);
+  width: 7rem;
+  border: none;
+  color: var(--color-darker);
+  padding: 10px 14px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border: solid 0.5px var(--color-dark);
+}
+
+.card-footer :nth-child(1):hover {
+  color: green;
+}
+
+.card-footer :nth-child(2):hover {
+  color: red;
+}
+
+input:hover {
+  cursor: pointer;
+  background-color: var(--color-lighter);
+  transition: 0.1s;
+  transform: scale(0.99);
+}
+
+#info {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light);
+}
+
+.info_text {
+  width: 60vw;
+  min-width: 300px;
+}
+
+#contact {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-darker);
+}
+
+footer h2,
+footer h3 {
+  color: var(--color-lighter);
+}
+
+footer a {
+  color: var(--color-light);
+}
+
+footer section {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
