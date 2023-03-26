@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Root */
+
+/* :root {
+  --primary-color: ;
+  --secondary-color: ;
+  --accent-color: ;
+} */
+
+/* Fonts */
+html {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--accent-color);
+  font-family: "Montserrat", sans-serif serif;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: "Karla", sans-serif;
+  font-size: 1.9553rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--secondary-color);
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
