@@ -109,7 +109,7 @@ nav a {
 
 nav a.logo {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -211,7 +211,7 @@ header button {
   padding: 3rem;
 }
 
-.header_graphics object {
+.header_graphics img {
   width: 100%;
   height: 100%;
 }
@@ -344,6 +344,13 @@ footer section div {
     font-size: 0.9em;
   }
 
+  nav a.logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
   .header_text {
     display: flex;
     flex-direction: column;
@@ -356,6 +363,7 @@ footer section div {
     line-height: 2rem;
     margin-bottom: 2rem;
   }
+
   .headline div h2 {
     font-size: 2.052rem;
     line-height: 2.5rem;
