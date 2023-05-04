@@ -81,14 +81,14 @@ button:hover {
 
 /* UI Animation - Reveal */
 
-.reveal .assignment_container {
-  transform: translateX(-150px);
+.reveal #assignments_container {
+  transform: translateY(250px);
   opacity: 0;
   transition: 1s 0.5s all ease;
 }
 
-.reveal.active .assignment_container {
-  transform: translateX(0);
+.reveal.active #assignments_container {
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -195,6 +195,7 @@ header button {
 }
 
 .header_text {
+  font-size: 1.5rem;
   width: 30vw;
   min-width: 300px;
 }
@@ -218,7 +219,7 @@ header button {
 
 /* Assignments section */
 #assignments {
-  padding: 5rem 3rem;
+  padding: 3rem 3rem;
   background-color: var(--primary-color);
 }
 
@@ -233,14 +234,25 @@ header button {
   justify-content: space-around;
   border-top: 1px solid var(--secondary-color);
   border-bottom: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
   text-transform: uppercase;
 }
 
-#assignments .assignment_container {
+#assignments_container {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-height: 80vh;
+  padding: 0.2rem;
+  margin: 1rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+#assignments .assignment {
+  display: flex;
+  flex-direction: column;
   min-height: 20vh;
   padding: 2rem;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -249,17 +261,17 @@ header button {
   width: 30vw;
   min-width: 300px;
   color: var(--secondary-color);
-  padding: 1rem;
-  margin: 1rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
 }
 
-#assignments article:first-child .assignment_text {
-  width: 50vw;
+#assignments .assignment_text {
+  width: 10vw;
   min-width: 300px;
   text-align: center;
 }
 
-#assignments article:first-child .assignment_graphics {
+#assignments .assignment_graphics {
   width: 2vw;
   height: 2vh;
   min-width: 100px;
@@ -339,7 +351,8 @@ footer section div {
 }
 
 /* Media queries */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+
   html {
     font-size: 0.9em;
   }
@@ -358,6 +371,20 @@ footer section div {
     justify-content: space-around;
   }
 
+  .assignment {
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
+  #assignments_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0.2rem;
+    margin: 1rem;
+    border-bottom: 1px solid var(--primary-color);
+  }
+
   #assignments h2 {
     font-size: 1.953rem;
     line-height: 2rem;
@@ -368,4 +395,9 @@ footer section div {
     font-size: 2.052rem;
     line-height: 2.5rem;
   }
+
+  .headline p {
+    color: var(--primary-color);
+  }
+
 }
