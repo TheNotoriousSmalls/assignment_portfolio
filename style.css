@@ -177,7 +177,7 @@ nav a.logo {
 /* Header */
 header {
   display: flex;
-  min-height: 60vh;
+  min-height: 70vh;
   padding: 5rem;
   align-items: center;
   justify-content: space-around;
@@ -242,7 +242,7 @@ header button {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  min-height: 80vh;
+  min-height: 100vh;
   padding: 0.2rem;
   margin: 1rem;
   border-bottom: 1px solid var(--secondary-color);
@@ -297,7 +297,7 @@ header button {
 /* Headline */
 .headline {
   display: flex;
-  min-height: 70vh;
+  min-height: 50vh;
   padding: 2rem;
   align-items: center;
   justify-content: space-around;
@@ -351,7 +351,7 @@ footer section div {
 }
 
 /* Media queries */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
   html {
     font-size: 0.9em;
